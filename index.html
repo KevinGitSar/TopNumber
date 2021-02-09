@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Top Number!</title>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/game.css">
+    <script src="js/topNumber.js"></script>
+
+    <!-- 
+        Kevin Sar, 000390567
+        Created: Sunday, ‎November ‎8, ‎2020, ‏‎6:41:32 PM
+        This index.html for the dice game that I will call TOP NUMBER! is the view for players, it's what they see.
+        This includes the form, and game.
+    -->
+
+</head>
+
+<body>
+    <div id="formContainer">
+
+        <h1>TOP NUMBER!</h1>
+        <form id="playerForm">
+
+            <div>
+                <label for="player1">Please Enter Name of Player 1: </label>
+            </div>
+            <div>
+                <input type="text" id="player1" name="player1" required>
+            </div>
+
+            <div>
+                <label for="player1Age">Please Enter Age of Player 1: </label>
+            </div>
+            <div>
+                <input type="number" id="player1Age" name="player1Age" placeholder="12" required>
+            </div>
+
+            <div>
+                <label for="player1Color">Please Select Player 1's favourite Color: </label>
+            </div>
+            <div>
+                <input type="color" id="player1Color" name="player1Color" value="#420469" required>
+            </div>
+
+            <div>
+                <label for="player2">Please Enter Name of Player 2: </label>
+            </div>
+            <div>
+                <input type="text" id="player2" name="player2" required>
+            </div>
+
+            <div>
+                <label for="player2Age">Please Enter Age of Player 2: </label>
+            </div>
+            <div>
+                <input type="number" id="player2Age" name="player2Age" placeholder="12" required>
+            </div>
+
+            <div>
+                <label for="player2Color">Please Select Player 2's favourite Color: </label>
+            </div>
+            <div>
+                <input type="color" id="player2Color" name="player2Color" value="#690420" required>
+            </div>
+
+            <div>
+                <label for="dice">How many dice per player?</label>
+            </div>
+            <div>
+                <input type="number" id="dice" name="dice" placeholder="1" min="1" max="5" required>
+            </div>
+
+            <div>
+                <input type="submit" value="Play!" id="playButton">
+            </div>
+
+        </form>
+    </div>
+
+    <div id="gameContainer">
+        <div>
+            <div id="player1Set">
+                <input type="submit" value="Player1 Roll" id="player1Roll">
+                <div id="player1DiceSet"></div>
+                <input type="submit" value="Save Score!" id="player1Score">
+            </div>
+
+            <div id="player2Set">
+                <input type="submit" value="Player2 Roll" id="player2Roll">
+                <div id="player2DiceSet"></div>
+                <input type="submit" value="Save Score!" id="player2Score">
+            </div>
+
+            <div>
+                <input type="submit" value="Next Round!" id="newRound">
+            </div>
+        </div>
+
+        <div id="scoreBoard">
+
+            <div id="result"></div>
+
+            <table>
+                <tr>
+                    <th colspan="3">SCORE BOARD</th>
+                </tr>
+
+                <tr>
+                    <td id="name1"></td>
+                    <td>versus</td>
+                    <td id="name2"></td>
+                </tr>
+
+                <tr>
+                    <td></td>
+                    <td id="round"></td>
+                    <td></td>
+                </tr>
+
+                <tr>
+                    <td id="player1CRolls"></td>
+                    <td id="crt"></td>
+                    <td id="player2CRolls"></td>
+                </tr>
+
+                <tr>
+                    <td id="scoreBoard1"></td>
+                    <td>Total Wins</td>
+                    <td id="scoreBoard2"></td>
+                </tr>
+
+            </table>
+
+            <div>
+                <input type="submit" value="Reset Game" id="resetGame">
+            </div>
+
+            <div id="instructionHeader">
+                <h1>Instructions!</h1>
+            </div>
+            <div id="instructions">
+                <p>Top Number is about getting the highest number!
+                    <br>
+                    <br>Start by rolling the die or set of dice,
+                    <br>
+                    <br>You then re-arrange the set of dice from largest number to smallest,
+                    <br>and that becomes your largest number!
+                    <br>
+                    <br>You get a total of 3 tries, your third roll will become your largest number, 
+                    <br>even if you rolled a bigger number the first or second time.
+                    <br>
+                    <br>If you're confident with your first or second roll, you may save that number.
+                    <br>
+                    <br>The second player then takes their turn.
+                    <br>
+                    <br>The third roll is not shown on screen, but is shown in the score board.
+                    <br>
+                    <br>Good Luck and have fun!
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div id="error">
+        <h1>ERROR!</h1>
+        <div id="errorMsg"></div>
+        <input type="submit" value="Try Again!" id="refresh">
+    </div>
+
+
+</body>
+
+</html>

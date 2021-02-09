@@ -1,0 +1,195 @@
+/*
+    Kevin Sar, 000390567
+    Created: Sunday, ‎November ‎8, ‎2020, ‏‎7:28:26 PM
+    This is the css file for the game TOP NUMBER!
+*/
+
+
+
+body {
+    background-color: darkseagreen;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    color: white;
+}
+
+input {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+}
+
+label {
+    width: 100%;
+}
+
+input[type=text] {
+    width: 100%;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=submit] {
+    width: 100%;
+    background-color: lightgreen;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: green;
+}
+
+input[type=color],
+input[type=number] {
+    width: 98%;
+    margin: 8px 0;
+}
+
+div {
+    margin: auto;
+    width: 80%;
+}
+
+#formContainer {
+    width: 30%;
+    border: 3px solid;
+    border-radius: 50px;
+    border-color: black;
+    padding: 20px;
+    visibility: visible;
+}
+
+#playerForm {
+    padding: 20px;
+}
+
+#playerForm div {
+    margin: auto;
+}
+
+#gameContainer {
+    width: 100%;
+    display: none;
+}
+
+
+.newDie,
+.newDie2 {
+    font-size: 90px;
+    text-align: center;
+    background-color: white;
+    color: black;
+    float: left;
+    border: 5px solid black;
+    height: 90px;
+    width: 90px;
+    margin-right: 15px;
+    margin-bottom: 15px;
+    border-radius: 15px;
+}
+
+#player2Set,
+#newRound,
+#player1Score,
+#player2Score {
+    display: none;
+}
+
+
+td {
+    padding: 50px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+table,
+th {
+    border: 5px solid black;
+    border-collapse: collapse;
+    border-radius: 15px;
+}
+
+table {
+    margin-right: auto;
+    margin-left: auto;
+}
+
+
+th {
+    padding: 15px;
+}
+
+#error {
+    display: none;
+}
+
+#instructions {
+    display: none;
+}
+
+#instructionHeader:hover {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background-color: green;
+    cursor: pointer;
+}
+
+h1 {
+    text-align: center;
+}
+
+@media screen and (max-width:900px){
+    body{
+        background-color: lightcoral;
+    }
+    #formContainer, #gameContainer{
+        width: 85%;
+    }
+
+    #scoreBoard{
+        margin: 0;
+        padding: 0px;
+    }
+
+    #scoreBoard div table{
+        width: 0;
+    }
+
+    td{
+        padding: 20px;
+    }
+
+    div{
+        width:100%;
+    }
+}
+
+@media only screen and (max-width:320px){
+    body {
+        background-color:lightblue;
+        font-size: 100%;
+    }
+
+    #formContainer, #gameContainer{
+        width: 85%;
+    }
+
+    #scoreBoard{
+        margin: 0;
+        padding: 0px;
+    }
+
+    #scoreBoard div table{
+        width: 0;
+    }
+
+    td{
+        padding: 20px;
+    }
+}
